@@ -281,7 +281,7 @@ class Parser():
             expr = res.register(self.expr())
             if res.error: return res
             if self.current_tok.type == TT_RPAREN:
-                res.register(self.advance())
+                res.register(self.advance()) 
                 return res.success(expr)
             else:
                 return res.failure(InvalidSyntaxError(
